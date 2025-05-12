@@ -1,14 +1,15 @@
-// Scroll Reveal Animations
-ScrollReveal().reveal('.reveal', {
-  distance: '50px',
-  duration: 800,
-  easing: 'ease-in-out',
-  origin: 'bottom',
-  interval: 200
-});
+// Hero Image Carousel
+let current = 0;
+const images = document.querySelectorAll('.carousel-image');
 
-// Simple contact alert
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('Thank you! We will contact you shortly.');
+function showNextImage() {
+  images[current].classList.remove('active');
+  current = (current + 1) % images.length;
+  images[current].classList.add('active');
+}
+setInterval(showNextImage, 5000); // Change every 5 seconds
+
+// Mobile Nav Toggle
+document.getElementById('menuToggle').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('active');
 });
