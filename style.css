@@ -14,6 +14,7 @@ body, html {
   width: 100%;
   top: 0;
   z-index: 999;
+  transition: background 0.3s ease;
 }
 .navbar .container {
   display: flex;
@@ -22,7 +23,7 @@ body, html {
   padding: 1rem;
 }
 .logo {
-  color: #ffa500;
+  color: #007bff;
   font-size: 1.5rem;
 }
 .nav-links {
@@ -33,17 +34,31 @@ body, html {
 .nav-links a {
   text-decoration: none;
   color: #333;
+  transition: color 0.3s ease;
 }
+.nav-links a:hover {
+  color: #007bff;
+}
+
 .hero {
-  background: linear-gradient(to right, #007bff, #ffa500);
+  background: url('https://images.unsplash.com/photo-1543269865-cbf427effbad') center/cover no-repeat fixed;
   color: white;
   padding: 100px 20px;
   text-align: center;
   margin-top: 60px;
 }
+.hero-content {
+  background-color: rgba(0,0,0,0.5);
+  padding: 50px;
+  border-radius: 10px;
+}
 .hero h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  animation: fadeInUp 1s ease;
+}
+.hero p {
+  animation: fadeInUp 1.2s ease;
 }
 .btn {
   display: inline-block;
@@ -53,6 +68,12 @@ body, html {
   border-radius: 5px;
   text-decoration: none;
   margin-top: 20px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.btn:hover {
+  background: #007bff;
+  color: white;
+  transform: scale(1.05);
 }
 .section {
   padding: 60px 20px;
@@ -65,11 +86,7 @@ body, html {
   margin: 0 auto;
 }
 .services-list {
-  list-style: none;
-  padding-left: 20px;
-}
-.services-list li {
-  margin-bottom: 10px;
+  list-style: disc inside;
 }
 form input, form textarea {
   width: 100%;
@@ -81,4 +98,10 @@ form input, form textarea {
   color: white;
   text-align: center;
   padding: 20px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% { transform: translateY(40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
