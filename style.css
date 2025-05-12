@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.logo {
+  color: #ffa500;
+  font-size: 1.5rem;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+.hero {
+  background: linear-gradient(to right, #007bff, #ffa500);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: white;
+  color: #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+.section {
+  padding: 60px 20px;
+}
+.bg-light {
+  background-color: #f9f9f9;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.services-list {
+  list-style: none;
+  padding-left: 20px;
+}
+.services-list li {
+  margin-bottom: 10px;
+}
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
